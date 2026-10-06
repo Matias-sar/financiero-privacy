@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financiero — Políticas</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+
+  :root {
+    --bg: #FAFBFC;
+    --surface: #FFFFFF;
+    --fg: #1A2332;
+    --fg-secondary: #4B5C72;
+    --accent: #0093B8;
+    --accent-soft: #E4F5FA;
+    --border: #E2E7ED;
+    --divider: #EEF1F4;
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1419;
+      --surface: #1A2332;
+      --fg: #E8EDF2;
+      --fg-secondary: #8A9BB0;
+      --accent: #22B4D8;
+      --accent-soft: rgba(0,147,184,0.15);
+      --border: #2A3545;
+      --divider: #1E2D3D;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1419;
+    --surface: #1A2332;
+    --fg: #E8EDF2;
+    --fg-secondary: #8A9BB0;
+    --accent: #22B4D8;
+    --accent-soft: rgba(0,147,184,0.15);
+    --border: #2A3545;
+    --divider: #1E2D3D;
+    color-scheme: dark;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    padding-inline: 24px;
+  }
+
+  .wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-block: 48px 80px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .logo-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--accent);
+    margin-bottom: 20px;
+  }
+
+  .logo-mark svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .header h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+
+  .header .subtitle {
+    color: var(--fg-secondary);
+    font-size: 0.95rem;
+    margin: 0 0 12px;
+  }
+
+  .header .update-date {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: 600;
+    background: var(--accent-soft);
+    padding: 4px 14px;
+    border-radius: 20px;
+  }
+
+  .notice {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+    color: var(--fg-secondary);
+    line-height: 1.6;
+  }
+
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .section-number {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-soft);
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .section h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.35rem;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+
+  .section p {
+    color: var(--fg-secondary);
+    font-size: 0.92rem;
+    margin: 0 0 14px;
+  }
+
+  .section p:last-child {
+    margin-bottom: 0;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background: var(--divider);
+    margin: 40px 0;
+  }
+
+  .footer {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid var(--divider);
+    color: var(--fg-secondary);
+    font-size: 0.82rem;
+    line-height: 1.8;
+  }
+
+  .footer .app-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.9rem;
+  }
+
+  .contact-email {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @media (max-width: 480px) {
+    .header h1 { font-size: 1.6rem; }
+    .section h2 { font-size: 1.15rem; }
+    .wrapper { padding-block: 32px 60px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+  <header class="header">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+      </svg>
+    </div>
+    <h1>Financiero</h1>
+    <p class="subtitle">Pol&iacute;tica de privacidad, t&eacute;rminos y condiciones</p>
+    <span class="update-date">Actualizado: octubre 2026</span>
+  </header>
+
+  <div class="notice">
+    Financiero no es un banco ni ofrece asesor&iacute;a financiera. La precisi&oacute;n de tus n&uacute;meros depende de que mantengas tus registros al d&iacute;a.
+  </div>
+
+  <section class="section">
+    <span class="section-number">1</span>
+    <h2>Pol&iacute;tica de privacidad</h2>
+    <p>Financiero guarda y procesa todos los datos exclusivamente en tu dispositivo, incluyendo la informaci&oacute;n de tus tarjetas de cr&eacute;dito (nombre, &uacute;ltimos d&iacute;gitos, l&iacute;mites y saldos). No existe cuenta de usuario, base de datos remota ni sincronizaci&oacute;n en la nube.</p>
+    <p>Al exportar un respaldo, se genera un archivo cifrado con una contrase&ntilde;a que t&uacute; defines. Esta contrase&ntilde;a no se almacena en la app y no puede recuperarse. Si la pierdes, no hay forma de restaurar el respaldo.</p>
+    <p>La app solo solicita los permisos estrictamente necesarios, como la biometr&iacute;a para desbloquear la app si decides activarla, y notificaciones para recordatorios de pagos.</p>
+    <p>En el futuro, se integrar&aacute; un asistente de inteligencia artificial que env&iacute;e informaci&oacute;n a un proveedor externo. Se te informar&aacute; de forma clara y se pedir&aacute; tu consentimiento expl&iacute;cito antes de enviar cualquier dato fuera de tu dispositivo.</p>
+    <p>Puedes eliminar todos tus datos en cualquier momento desde la secci&oacute;n de Ajustes utilizando la opci&oacute;n &quot;Borrar todos los datos&quot;. Esta acci&oacute;n borra de forma permanente toda la informaci&oacute;n almacenada en tu dispositivo.</p>
+    <p>Para dudas o solicitudes relacionadas con tus datos personales, puedes escribirnos a: <span class="contact-email">soporte@financieroapp.com</span></p>
+  </section>
+
+  <hr>
+
+  <section class="section">
+    <span class="section-number">2</span>
+    <h2>T&eacute;rminos y condiciones</h2>
+    <p>Financiero es una herramienta de organizaci&oacute;n financiera personal. No es un banco, no est&aacute; conectada a entidades financieras y no realiza movimientos de dinero. La gesti&oacute;n de tarjetas de cr&eacute;dito es &uacute;nicamente un registro informativo y no representa una conexi&oacute;n real con ninguna instituci&oacute;n bancaria.</p>
+    <p>La precisi&oacute;n de saldos, reportes y c&aacute;lculos depende completamente de que el usuario registre sus movimientos de forma completa y oportuna.</p>
+    <p>El usuario es responsable de la custodia de sus respaldos exportados y de la contrase&ntilde;a de cifrado utilizada para protegerlos.</p>
+    <p>Para utilizar Financiero debes ser mayor de 18 a&ntilde;os. Si eres menor de edad, necesitas la autorizaci&oacute;n y supervisi&oacute;n de tu padre, madre o tutor legal.</p>
+  </section>
+
+  <hr>
+
+  <section class="section">
+    <span class="section-number">3</span>
+    <h2>Descargo financiero</h2>
+    <p>La informaci&oacute;n y funciones de Financiero son &uacute;nicamente de apoyo informativo y organizativo. No constituyen asesor&iacute;a financiera, legal ni fiscal.</p>
+    <p>Cualquier decisi&oacute;n financiera que tomes es de tu responsabilidad exclusiva. Recomendamos consultar con profesionales calificados para decisiones financieras importantes.</p>
+  </section>
+
+  <hr>
+
+  <section class="section">
+    <span class="section-number">4</span>
+    <h2>Ley aplicable y jurisdicci&oacute;n</h2>
+    <p>Estos t&eacute;rminos se rigen e interpretan conforme a las leyes de la Rep&uacute;blica de El Salvador.</p>
+    <p>Cualquier controversia derivada del uso de Financiero ser&aacute; sometida a los tribunales competentes de la Rep&uacute;blica de El Salvador.</p>
+  </section>
+
+  <footer class="footer">
+    <span class="app-name">Financiero</span><br>
+    Organizaci&oacute;n financiera personal<br>
+    El Salvador &middot; 2026<br>
+    <span class="contact-email">soporte@financieroapp.com</span>
+  </footer>
+</div>
+
+</body>
+</html>
